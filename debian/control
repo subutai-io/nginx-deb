@@ -1,0 +1,16 @@
+Source: subutai-nginx
+Section: utils
+Priority: optional
+Maintainer: Aron Xu <happyaron.xu@gmail.com>
+Build-Depends: debhelper (>= 10),
+Standards-Version: 4.1.3
+Homepage: http://github.com/happyaron/subutai-nginx
+
+Package: subutai-nginx
+Architecture: all
+Depends: nginx,
+         ${misc:Depends},
+         ${shlibs:Depends}
+Conflicts: subutai (<< 6.4.12+20180506)
+Description: intelligent P2P cloud computing - nginx module
+ project allows users to build their private networks

@@ -1,0 +1,12 @@
+Package: subutai-nginx
+Version: 0.1+20180505
+Architecture: all
+Maintainer: Aron Xu <happyaron.xu@gmail.com>
+Installed-Size: 33
+Depends: nginx
+Conflicts: subutai (<< 6.4.12+20180506)
+Section: utils
+Priority: optional
+Homepage: http://github.com/happyaron/subutai-nginx
+Description: intelligent P2P cloud computing - nginx module
+ project allows users to build their private networks

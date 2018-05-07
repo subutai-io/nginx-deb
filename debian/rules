@@ -1,0 +1,9 @@
+#!/usr/bin/make -f
+include /usr/share/dpkg/default.mk
+
+%:
+	dh $@ --with-systemd
+
+override_dh_auto_install:
+	mkdir -p debian/subutai/etc/subutai/
+	cp -r debian/tree/nginx debian/subutai/etc/subutai/
