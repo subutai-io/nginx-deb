@@ -1,7 +1,0 @@
-#!/bin/sh
-
-
-
-# FIXME: disabling system nginx for the moment
-invoke-rc.d nginx stop
-update-rc.d nginx disable
