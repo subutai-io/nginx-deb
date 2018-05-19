@@ -9,6 +9,7 @@ Homepage: http://github.com/happyaron/subutai-nginx
 Package: subutai-nginx
 Architecture: all
 Depends: nginx,
+         subutai-ovs,
          ${misc:Depends},
          ${shlibs:Depends}
 Conflicts: subutai (<< 6.4.12+20180506)

@@ -2,6 +2,7 @@
 Description=nginx instance for subutai
 Documentation=man:nginx(8)
 After=network-online.target
+After=subutai-dnsmasq.service
 Before=subutai.service
 
 [Service]
