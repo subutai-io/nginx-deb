@@ -7,6 +7,7 @@ Before=subutai.service
 
 [Service]
 Type=forking
+Restart=on-failure
 PIDFile=/run/subutai-nginx.pid
 ExecStartPre=/usr/sbin/nginx -c /etc/subutai/nginx/nginx.conf -t -q -g 'daemon on; master_process on;'
 ExecStart=/usr/sbin/nginx -c /etc/subutai/nginx/nginx.conf -g 'daemon on; master_process on;'
