@@ -49,11 +49,11 @@ try {
 		notifyBuildDetails = "\nFailed on Stage - Version tweaks"
 		sh """
                         cd ${CWD}/nginx-deb || exit 1
-                        nginx-deb_version=\$(git describe --abbrev=0 --tags)+\$(date +%Y%m%d%H%M%S0)
-			echo "VERSION is \$nginx-deb_version"
+                        nginx_version=\$(git describe --abbrev=0 --tags)+\$(date +%Y%m%d%H%M%S0)
+			echo "VERSION is \$nginx_version"
 
 			cd ${CWD}/nginx-deb && sed -i 's/quilt/native/' debian/source/format
-			dch -v "\$nginx-deb_version" -D stable "Test build for \$nginx-deb_version" 1>/dev/null 2>/dev/null
+			dch -v "\$nginx_version" -D stable "Test build for \$nginx_version" 1>/dev/null 2>/dev/null
 		"""
 
 		stage("Build subutai-nginx package")
