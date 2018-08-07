@@ -74,8 +74,8 @@ try {
 		sh """
 			cd ${CWD}
 			touch uploading_nginx
-			scp uploading_nginx subutai*.deb dak@deb.subutai.io:incoming/${release}/
-			ssh dak@deb.subutai.io sh /var/reprepro/scripts/scan-incoming.sh ${release} nginx
+			scp uploading_nginx subutai*.deb dak@debup.subutai.io:incoming/${release}/
+			ssh dak@debup.subutai.io sh /var/reprepro/scripts/scan-incoming.sh ${release} nginx
 		"""
 	}
 
