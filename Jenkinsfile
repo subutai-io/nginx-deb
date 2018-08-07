@@ -60,7 +60,7 @@ try {
 		notifyBuildDetails = "\nFailed on Stage - Build package"
 		sh """
 			cd ${CWD}/nginx-deb
-			dpkg-buildpackage -rfakeroot
+			dpkg-buildpackage -rfakeroot -us -uc
 
 			cd ${CWD} || exit 1
 			for i in *.deb; do
