@@ -10,6 +10,7 @@ Package: subutai-nginx
 Architecture: all
 Depends: nginx,
          subutai-ovs,
+         ssl-cert,
          ${misc:Depends},
          ${shlibs:Depends}
 Conflicts: subutai (<< 6.4.12+20180506)
