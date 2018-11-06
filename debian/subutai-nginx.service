@@ -4,6 +4,7 @@ Documentation=man:nginx(8)
 After=network-online.target
 After=subutai-dnsmasq.service
 Before=subutai.service
+OnFailure=subutai-cop.service
 
 [Service]
 Type=forking
@@ -15,7 +16,6 @@ ExecReload=/usr/sbin/nginx -c /etc/subutai/nginx/nginx.conf -g 'daemon on; maste
 ExecStop=-/sbin/start-stop-daemon --quiet --stop --retry QUIT/5 --pidfile /run/subutai-nginx.pid
 TimeoutStopSec=5
 KillMode=mixed
-OnFailure=subutai-cop.service
 
 [Install]
 WantedBy=multi-user.target
