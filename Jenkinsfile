@@ -93,10 +93,8 @@ def notifyBuild(String buildStatus = 'STARTED', String details = '') {
     colorCode = '#FF0000'
 	summary = "${subject} (${env.BUILD_URL})${details}"
   }
-  // Get token
-  def slackToken = getSlackToken('sysnet')
-  // Send notifications
-  slackSend (color: colorCode, message: summary, teamDomain: 'optdyn', token: "${slackToken}")
+	def mattermost_rest = "https://mm.optdyn.com/hooks/k1ujhg8xwigupxjzqbwzpgdp3h"
+ 	mattermostSend(color: colorCode, icon: "https://jenkins.io/images/logos/jenkins/jenkins.png", message: summary, channel: "#sysnet-bots", endpoint: "${mattermost_rest}" )
 }
 
 // get slack token from global jenkins credentials store
